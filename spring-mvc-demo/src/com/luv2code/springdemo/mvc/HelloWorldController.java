@@ -1,13 +1,18 @@
 package com.luv2code.springdemo.mvc;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
+	
+	@RequestMapping("")
+	public String showHello() {
+		return "parenthello";
+	}
 
 	@RequestMapping("/showForm")
 	public String showForm() {
@@ -20,13 +25,13 @@ public class HelloWorldController {
 	}
 	
 	@RequestMapping("/processFormV2")
-	public String letsShoutDude(HttpServletRequest request, Model model) {
+	public String letsShoutDude(@RequestParam("studentName") String theName, Model model) {
 		
-		String theName = request.getParameter("studentName");
+//		String theName = request.getParameter("studentName");
 		
 		theName = theName.toUpperCase();
 		
-		String result = "Yo! " + theName;
+		String result = "Hi! " + theName;
 		
 		model.addAttribute("message", result);
 		
