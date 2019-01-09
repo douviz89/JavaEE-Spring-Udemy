@@ -20,6 +20,7 @@ public class StudentController {
 		
 		// log input data
 		System.out.println("theStudent: " +  theStudent.getLastName() +" " + theStudent.getFirstName() + " is from " + theStudent.getCountry());
+		System.out.println("Fav Language: " + theStudent.getFavLanguage() + ", Operating Systems: " + theStudent.getOperatingSystems() );
 		
 		return "student-confirmation";
 	}

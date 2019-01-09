@@ -9,9 +9,11 @@ public class Student {
 	private String lastName;
 	private String country;
 	private String favLanguage;
+	private String[] operatingSystems;
 	
 	private LinkedHashMap<String, String> countryOptions;
 	private ArrayList<String> languages;
+	private ArrayList<String> opSystems;
 	
 	public Student() {
 		
@@ -27,6 +29,11 @@ public class Student {
 		languages.add("C#");
 		languages.add("PHP");
 		languages.add("Ruby");
+		
+		opSystems = new ArrayList<>();
+		opSystems.add("Linux");
+		opSystems.add("Mac OS");
+		opSystems.add("Windows");
 		
 	}
 	
@@ -70,9 +77,17 @@ public class Student {
 		return languages;
 	}
 
-	
-	
-	
+	public ArrayList<String> getOpSystems() {
+		return opSystems;
+	}
+
+	public String[] getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(String[] operatingSystems) {
+		this.operatingSystems = operatingSystems;
+	}
 	
 
 }
