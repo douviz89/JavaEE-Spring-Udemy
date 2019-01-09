@@ -12,5 +12,7 @@
 	<a href="hello">Hello Form</a>
 	<br>
 	<a href="student/showForm">Add Student</a>
+	<br>
+	<a href="customer/showForm">Customer form validation</a>
 </body>
 </html>
